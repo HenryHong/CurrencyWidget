@@ -1,0 +1,26 @@
+div{
+	border-style: solid;
+	border-radius: 5px;
+	max-width: 20em;
+	padding-left: 1em;
+	padding-right: 0.5em;
+}
+
+h1{
+	font-family: Helvetica Neue, Helvetica;
+}
+
+p{
+	font-family: Helvetica Neue, Helvetica;
+}
+
+#Amount, #ConvertedAmt{
+    border-radius: 5px; 
+	height : 2.5em;
+	font-size: 20px;
+}
+
+#Currency1, #Currency2 {
+	border-radius: 5px; 
+	font-size: 25px;
+}
