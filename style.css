@@ -1,18 +1,17 @@
-div{
+.converter{
 	border-style: solid;
 	border-radius: 5px;
 	max-width: 20em;
 	padding-left: 1em;
 	padding-right: 0.5em;
+	margin: 1em;
 }
 
-h1{
-	font-family: Helvetica Neue, Helvetica;
+.Container{
+	width: 100%;
+    border: 1px solid gray;
 }
 
-p{
-	font-family: Helvetica Neue, Helvetica;
-}
 
 #Amount, #ConvertedAmt{
     border-radius: 5px; 
@@ -22,5 +21,34 @@ p{
 
 #Currency1, #Currency2 {
 	border-radius: 5px; 
-	font-size: 25px;
+	font-size: 1.75em;
+}
+
+header {
+    padding: 1em;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: center;
+    padding-bottom: 0.5em;
+    font-size: 2em;
+}
+
+footer {
+    padding: 1em;
+    color: white;
+    background-color: grey;
+    clear: left;
+    text-align: center;
+    padding-bottom: 0.5em;
+    font-size: 0.75em;
+}
+
+
+h1{
+	font-family: Helvetica Neue, Helvetica;
+}
+
+p{
+	font-family: Helvetica Neue, Helvetica;
 }
