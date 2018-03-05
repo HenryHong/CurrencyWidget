@@ -5,21 +5,50 @@
 	padding-left: 1em;
 	padding-right: 0.5em;
 	margin: 1em;
+	display: inline-block;
+	
 }
+
+.converter2{
+	border-style: solid;
+	border-radius: 5px;
+	max-width: 20em;
+	padding-left: 1em;
+	padding-right: 0.5em;
+	margin: 1em;
+	float: center;
+	display: inline-block;
+}
+
+.converter3{
+	border-style: solid;
+	border-radius: 5px;
+	max-width: 20em;
+	padding-left: 1em;
+	padding-right: 0.5em;
+	margin: 1em;
+	display: inline-block;
+}
+
 
 .Container{
 	width: 100%;
-    border: 1px solid gray;
+    border: 1px solid black;
+}
+
+.convertercontainer{
+	width: 100%;
 }
 
 
-#Amount, #ConvertedAmt{
+
+#Amount, #ConvertedAmt, #Amount2, #ConvertedAmt2, #Amount3, #ConvertedAmt3{
     border-radius: 5px; 
 	height : 2.5em;
 	font-size: 20px;
 }
 
-#Currency1, #Currency2 {
+#Currency1, #Currency2,#Currency3, #Currency4 ,#Currency5, #Currency6{
 	border-radius: 5px; 
 	font-size: 1.75em;
 }
