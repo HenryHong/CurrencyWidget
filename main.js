@@ -78,10 +78,6 @@ function Exchange (choice){
 		if ((isNaN(preamt.value) != true) && (preamt.value >= 0)){
 			if (Currency1 == Currency2){
 					result = parseFloat(preamt.value)|| 0;
-					
-					console.log(preamt.value);
-					console.log(result);
-					
 					postamt.value = result.toFixed(2);
 			}
 			else {
