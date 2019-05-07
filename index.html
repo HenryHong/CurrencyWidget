@@ -1,98 +1,45 @@
 <!DOCTYPE html>
 <html>
-
+ 
 <head>
-<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
-<meta content="utf-8" http-equiv="encoding">
-<title>Home Depot Assignment </title>
-<link rel="stylesheet" href="style.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link rel="stylesheet" href="style.css">
+	<title>Display IP Address</title>
 </head>
-
+ 
 <body>
-	<div class="Container">
-		<header><p>Home Depot - Currency Assignment</p></header>
-	
-	    <div class="convertercontainer">
-		<div class="converter">
 
-			<h1> Currency Converter </h1>
+	<textarea rows="100" cols="150"  id="ResponseBody">Hello</textarea>
 	
-			<!-- The first input box and select box -->
-			<p> Type in amount and select currency</p>
-			<p> <input Id="Amount" autocomplete ="off" value = "0.00">
-			<select Id="Currency1">
-				<option value="CAD">CAD</option>
-				<option value="USD">USD</option>
-				<option value="EUR">EUR</option>
-    		</select> </p> <br>
+	<script>
 	
-			<!-- The second input box and select box -->
-			<p> Converted amount</p>
-			<p> <input Id="ConvertedAmt" autocomplete ="off" value = "0.00"> 
-			<select Id="Currency2">
-				<option value="CAD">CAD</option>
-				<option value="USD">USD</option>
-				<option value="EUR">EUR</option>
-    		</select> </p>
 	
-			<a href="#"><p align="right" id="disclaimer">Disclaimer</p></a>	
-		</div>
+		var APIKey = "RGAPI-f4820fc1-e864-4b2c-b120-f966e8737461";
+		var testurl = "https://na1.api.riotgames.com/lol/platform/v3/champion-rotations";
 		
-		<div class="converter2">
-
-			<h1> Currency Converter </h1>
 	
-			<!-- The first input box and select box -->
-			<p> Type in amount and select currency</p>
-			<p> <input Id="Amount2" autocomplete ="off" value = "0.00">
-			<select Id="Currency3">
-				<option value="CAD">CAD</option>
-				<option value="USD">USD</option>
-				<option value="EUR">EUR</option>
-    		</select> </p> <br>
-	
-			<!-- The second input box and select box -->
-			<p> Converted amount</p>
-			<p> <input Id="ConvertedAmt2" autocomplete ="off" value = "0.00"> 
-			<select Id="Currency4">
-				<option value="CAD">CAD</option>
-				<option value="USD">USD</option>
-				<option value="EUR">EUR</option>
-    		</select> </p>
-	
-			<a href="#"><p align="right" id="disclaimer2">Disclaimer</p></a>	
-		</div>
-		
-		<div class="converter3">
-
-			<h1> Currency Converter </h1>
-	
-			<!-- The first input box and select box -->
-			<p> Type in amount and select currency</p>
-			<p> <input Id="Amount3" autocomplete ="off" value = "0.00">
-			<select Id="Currency5">
-				<option value="CAD">CAD</option>
-				<option value="USD">USD</option>
-				<option value="EUR">EUR</option>
-    		</select> </p> <br>
-	
-			<!-- The second input box and select box -->
-			<p> Converted amount</p>
-			<p> <input Id="ConvertedAmt3" autocomplete ="off" value = "0.00"> 
-			<select Id="Currency6">
-				<option value="CAD">CAD</option>
-				<option value="USD">USD</option>
-				<option value="EUR">EUR</option>
-    		</select> </p>
-	
-			<a href="#"><p align="right" id="disclaimer3">Disclaimer</p></a>	
-		</div>
-		</div>
-		
-		<footer><p><em>Created by: Yi (Henry) Hong<em></p></footer>
-	<div>
-	
-	<script src="main.js"> </script>
-	
+		fetch (testurl, {
+        method: "GET", // *GET, POST, PUT, DELETE, etc.
+        mode: "cors", // no-cors, cors, *same-origin
+        cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+        credentials: "omit",
+        headers: {
+            "Content-Type": "application/json",
+			"Access-Control-Allow-Origin": "*",
+			"X-Riot-Token": APIKey,
+        },
+        redirect: "follow", // manual, *follow, error
+        referrer: "no-referrer", // no-referrer, *client
+		})
+		  .then(function(response) {
+			return response.json();
+		  })
+		  .then(function(myJson) {
+			console.log(JSON.stringify(myJson));
+		  });
+		  
+	</script>
 </body>
+ 
 </html>
